@@ -1,6 +1,6 @@
-^C:\USERS\SHREE\DESKTOP\CODE\C++\RAYLIB\RAYLIB SOLAR SYSTEM\BUILD\CMAKEFILES\A6F122AC31D5617BDD35581FDFF8CEBC\GENERATE.STAMP.RULE
+^C:\USERS\SHREE\DESKTOP\CODE\C++\RAYLIB\RAYLIB-SOLAR-SYSTEM\BUILD\CMAKEFILES\461F6F80E734BC8FAF6578D9BE854A51\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/shree/Desktop/Code/c++/Raylib/RayLib Solar System" "-BC:/Users/shree/Desktop/Code/c++/Raylib/RayLib Solar System/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/shree/Desktop/Code/c++/Raylib/RayLib Solar System/build/SOLAR_SYSTEM.sln"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/shree/Desktop/Code/c++/Raylib/Raylib-Solar-System -BC:/Users/shree/Desktop/Code/c++/Raylib/Raylib-Solar-System/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/shree/Desktop/Code/c++/Raylib/Raylib-Solar-System/build/SOLAR_SYSTEM.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

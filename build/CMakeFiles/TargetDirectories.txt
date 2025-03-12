@@ -1,3 +1,3 @@
-C:/Users/shree/Desktop/Code/c++/Raylib/RayLib Solar System/build/CMakeFiles/Solar.dir
-C:/Users/shree/Desktop/Code/c++/Raylib/RayLib Solar System/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/shree/Desktop/Code/c++/Raylib/RayLib Solar System/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/shree/Desktop/Code/c++/Raylib/Raylib-Solar-System/build/CMakeFiles/Solar.dir
+C:/Users/shree/Desktop/Code/c++/Raylib/Raylib-Solar-System/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/shree/Desktop/Code/c++/Raylib/Raylib-Solar-System/build/CMakeFiles/ZERO_CHECK.dir

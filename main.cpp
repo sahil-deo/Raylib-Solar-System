@@ -6,22 +6,22 @@
 class circle
 {
 public:
-    float x;       // X pos
-    float y;       // Y pos
-    float r;       // radius
-    float s;       // speed
-    Color c;       // color
-    float d;       // Distance from Center
-    float a;       // angle: required for speed
-    std::string n; // Name
+    float x;          // X pos
+    float y;          // Y pos
+    float radius;     // radius
+    float speed;      // speed
+    Color color;      // color
+    float distance;   // Distance from Center
+    float angle;      // angle: required for speed
+    std::string name; // Name
 
-    circle(std::string _n, float _r, float _s, Color _c, float _d) : n(_n), r(_r), c(_c), d(_d)
+    circle(std::string _name, float _radius, float _speed, Color _color, float _distance) : name(_name), radius(_radius), color(_color), distance(_distance)
     {
 
         x = 0;
         y = 0;
-        a = 0.0f;
-        s = _s * DEG2RAD;
+        angle = 0.0f;
+        speed = _speed * DEG2RAD;
     }
 };
 
@@ -48,7 +48,7 @@ int main()
     circle Uranus("Uranus", 15, 0.08, SKYBLUE, 400);
     circle Neptune("Neptune", 14, 0.04, DARKBLUE, 460);
 
-    std::vector<circle *> objects = {&Mercury, &Venus, &Earth, &Mars, &Jupiter, &Saturn, &Uranus, &Neptune};
+    std::vector<circle *> planets = {&Mercury, &Venus, &Earth, &Mars, &Jupiter, &Saturn, &Uranus, &Neptune};
 
     Camera2D camera;
     Vector2 center = {0, 0};
@@ -102,28 +102,28 @@ int main()
         DrawText("Solar System Animation", 10, 5, 20, WHITE);
         BeginMode2D(camera);
 
-        DrawCircle(Sun.x, Sun.y, Sun.r, ORANGE);
-        DrawText(Sun.n.c_str(), Sun.x - Sun.r / 2 + 10, Sun.y - Sun.r - 20, 15, WHITE);
+        DrawCircle(Sun.x, Sun.y, Sun.radius, ORANGE);
+        DrawText(Sun.name.c_str(), Sun.x - Sun.radius / 2 + 10, Sun.y - Sun.radius - 20, 15, WHITE);
 
-        for (circle *o : objects)
+        for (circle *planet : planets)
         {
 
             if (!Paused)
             {
-                o->a += o->s * pace;
-                o->x = center.x + o->d * cosf(o->a);
-                o->y = center.y + o->d * sinf(o->a);
+                planet->angle += planet->speed * pace;
+                planet->x = center.x + planet->distance * cosf(planet->angle);
+                planet->y = center.y + planet->distance * sinf(planet->angle);
             }
             else
             {
                 DrawText("Paused", -80, -500, 40, WHITE);
             }
 
-            DrawText(o->n.c_str(), o->x - o->r, o->y - o->r - 20, 15, WHITE);
+            DrawText(planet->name.c_str(), planet->x - planet->radius, planet->y - planet->radius - 20, 15, WHITE);
 
-            DrawCircleLines(center.x, center.y, o->d, GRAY);
+            DrawCircleLines(center.x, center.y, planet->distance, GRAY);
 
-            DrawCircle(o->x, o->y, o->r, o->c);
+            DrawCircle(planet->x, planet->y, planet->radius, planet->color);
         }
 
         EndMode2D();
